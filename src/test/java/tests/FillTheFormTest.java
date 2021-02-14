@@ -22,7 +22,7 @@ public class FillTheFormTest {
         String lastName = "Медведев";
         String email = "obama@mail.com";
         String userNumber = "7999222445";
-        String subjects = "Some subject";
+        String subjects = "English";
         String fileName = "forTest.txt";
         String fileAddress = "./src/test/resourses/"+fileName;
         String currentAddress = "221 B Baker St, London, England";
@@ -47,7 +47,7 @@ public class FillTheFormTest {
         $x("//select[@class='react-datepicker__month-select']").click();
         $$(".react-datepicker__month-select > option").findBy(text(birthMonth)).click();
         $$x("//div[@class='react-datepicker__month']//div[@role='option']").findBy(text(birthDay)).click();
-        $x("//input[@id='subjectsInput']").setValue(subjects);
+        $x("//input[@id='subjectsInput']").setValue(subjects).pressEnter();
         $$x("//div[contains(@class,'custom-checkbox')]").findBy(text(hobby)).click();
         File file = new File(fileAddress);
         $x("//input[@id='uploadPicture']").uploadFile(file);
