@@ -17,7 +17,7 @@ public class FillTheFormWithSteps extends TestBase {
         String lastName = faker.name().lastName();
         String email = faker.internet().emailAddress();
         String userNumber = getRandomPhone();
-        String subjects = "English";
+        String subjects = "English2222";
         String fileName = "forTest.txt";
         String fileAddress = "./src/test/resourses/"+fileName;
         String currentAddress = faker.address().fullAddress();
